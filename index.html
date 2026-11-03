@@ -14,13 +14,15 @@
   <main class="app-shell">
     <header class="topbar">
       <a class="brand" href="./" aria-label="UV España, inicio"><span class="brand-sun">☀</span><span><strong>UV España</strong><small>Índice ultravioleta local</small></span></a>
-      <button class="install-button" id="installButton" hidden>＋ Instalar</button>
+      <button class="install-button" id="installButton">＋ Instalar app</button>
     </header>
 
     <section class="hero">
       <div class="hero-copy"><p class="eyebrow">Protección solar · España</p><h1>¿Qué UV hará hoy<br><em>en tu municipio?</em></h1><p>Busca un pueblo o ciudad y consulta la previsión del índice ultravioleta para planificar tus actividades al aire libre.</p></div>
       <div class="sun-orbit" aria-hidden="true"><span>☀</span></div>
     </section>
+
+    <section id="installHelp" class="install-help" hidden aria-live="polite"><strong>Instalar UV España en tu móvil</strong><p id="installHelpText"></p><button type="button" id="closeInstallHelp">Cerrar</button></section>
 
     <section class="search-card" aria-label="Buscar municipio">
       <form id="searchForm" class="search-form">
