@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#082c4c">
+  <meta name="description" content="Consulta el índice ultravioleta por municipio de España.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>UV España · Índice ultravioleta</title>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="UV España, inicio"><span class="brand-sun">☀</span><span><strong>UV España</strong><small>Índice ultravioleta local</small></span></a>
+      <button class="install-button" id="installButton" hidden>＋ Instalar</button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">Protección solar · España</p><h1>¿Qué UV hará hoy<br><em>en tu municipio?</em></h1><p>Busca un pueblo o ciudad y consulta la previsión del índice ultravioleta para planificar tus actividades al aire libre.</p></div>
+      <div class="sun-orbit" aria-hidden="true"><span>☀</span></div>
+    </section>
+
+    <section class="search-card" aria-label="Buscar municipio">
+      <form id="searchForm" class="search-form">
+        <label for="placeInput">Municipio de España</label>
+        <div class="search-row"><div class="input-wrap"><span>⌕</span><input id="placeInput" autocomplete="off" placeholder="Ej.: Cazorla, Alcalá de Guadaíra…" required><button type="button" id="clearButton" class="clear" hidden aria-label="Borrar búsqueda">×</button></div><button class="primary-button" type="submit">Consultar UV</button></div>
+        <div id="suggestions" class="suggestions" role="listbox" hidden></div>
+      </form>
+      <p class="hint">Escribe al menos 2 letras. Los resultados se limitan a España.</p>
+    </section>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+    <section id="result" hidden></section>
+
+    <section class="info-grid">
+      <article><span class="info-icon">◒</span><div><h2>¿Cómo se interpreta?</h2><p>El índice UV mide la intensidad de la radiación ultravioleta en una escala internacional. Cuanto mayor es el valor, mayor protección necesitas.</p></div></article>
+      <article><span class="info-icon">♢</span><div><h2>Una ayuda para decidir</h2><p>Consulta también la sombra, la ropa, las gafas de sol y la crema solar. La previsión no sustituye las recomendaciones sanitarias.</p></div></article>
+    </section>
+
+    <footer><p>Datos meteorológicos: <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a> · Geocodificación: <a href="https://www.geonames.org/" target="_blank" rel="noreferrer">GeoNames</a>.</p><p><a href="https://www.who.int/news-room/questions-and-answers/item/radiation-the-ultraviolet-(uv)-index" target="_blank" rel="noreferrer">Escala UV y protección · OMS</a></p></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

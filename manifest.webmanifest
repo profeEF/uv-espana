@@ -1,0 +1,10 @@
+{
+  "name": "UV España · Índice ultravioleta",
+  "short_name": "UV España",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7fbfc",
+  "theme_color": "#082c4c",
+  "description": "Consulta el índice ultravioleta por municipio de España.",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
